@@ -1,0 +1,12 @@
+{
+  "cell_m": 0.5,
+  "terrain_cell_m": 1.0,
+  "smooth_m": 0.5,
+  "min_height_m": 3.0,
+  "peak_separation_m": 3.0,
+  "ground_class": 2,
+  "max_points": 15000000,
+  "max_grid_cells": 2000000,
+  "viewer_points": 80000,
+  "seed": 40
+}

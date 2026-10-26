@@ -1,0 +1,91 @@
+{
+  "dataset_kind": "forinstance",
+  "input": {
+    "file": "data/forinstance/NIBIO/plot_10_annotated.las",
+    "header_points": 4066375,
+    "dimensions": [
+      "X",
+      "Y",
+      "Z",
+      "intensity",
+      "return_number",
+      "number_of_returns",
+      "scan_direction_flag",
+      "edge_of_flight_line",
+      "classification",
+      "synthetic",
+      "key_point",
+      "withheld",
+      "scan_angle_rank",
+      "user_data",
+      "point_source_id",
+      "gps_time",
+      "red",
+      "green",
+      "blue",
+      "treeID",
+      "treeSP"
+    ],
+    "crs": "EPSG:25832",
+    "bounds_min": [
+      599082.42,
+      6655150.82,
+      203.33
+    ],
+    "bounds_max": [
+      599110.25,
+      6655178.65,
+      232.37
+    ],
+    "selected_points": 4066375,
+    "class_counts": {
+      "0": 1,
+      "1": 843729,
+      "2": 21333,
+      "3": 1641822,
+      "4": 91710,
+      "5": 1420489,
+      "6": 47291
+    },
+    "reference_tree_count": 25
+  },
+  "config": {
+    "cell_m": 0.5,
+    "terrain_cell_m": 1.0,
+    "smooth_m": 0.5,
+    "min_height_m": 3.0,
+    "peak_separation_m": 3.0,
+    "ground_class": 2,
+    "max_points": 15000000,
+    "max_grid_cells": 2000000,
+    "viewer_points": 80000,
+    "seed": 40
+  },
+  "crop": null,
+  "detected_crowns": 13,
+  "terrain_extrapolated_point_fraction": 0.031608004672466265,
+  "ground_source": "supplied classification labels (not predicted by this pipeline)",
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.39",
+  "limitations": [
+    "2.5D canopy baseline; can miss understory or merge/split crowns.",
+    "Height p99 and crown footprints are estimates from assigned points.",
+    "Full selected plot is held in memory; chunked input is not streaming analysis."
+  ],
+  "evaluation": {
+    "protocol": "point-IoU one-to-one matching; IoU strictly greater than 0.5",
+    "reference_trees": 25,
+    "predicted_segments_in_scored_domain": 9,
+    "true_positives": 3,
+    "false_positives": 6,
+    "false_negatives": 22,
+    "precision": 0.3333333333333333,
+    "recall": 0.12,
+    "f1": 0.1764705882352941,
+    "mean_matched_iou": 0.5952342631289191,
+    "matched_cloud_height_p99_rmse_m": 0.26243396375591865,
+    "note": "Height metric is cloud-derived agreement, not independent field-height accuracy."
+  },
+  "wall_time_s_including_view_export": 4.965488312000161,
+  "peak_process_rss_mb": 458.34765625
+}
